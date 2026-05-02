@@ -19,7 +19,7 @@
       --brand-lime-soft: oklch(0.95 0.06 135);
       --brand-orange: oklch(0.72 0.18 50);
       --brand-purple: oklch(0.55 0.22 295);
-      --brand-yellow: oklch(0.88 0.18 95);
+      --brand-yellow: #ecfc53;
       --border: oklch(0.92 0.01 250);
       --muted-fg: oklch(0.45 0.03 250);
       --font-display: "Archivo Black", "Inter", system-ui, sans-serif;
@@ -380,48 +380,81 @@
       top: 50%;
       transform: translate(-50%, -50%);
       z-index: 10;
-      width: 6.5rem;
-      height: 6.5rem;
+      width: 8rem;
+      height: 8rem;
       border-radius: 9999px;
       background: var(--brand-blue);
-      display: grid;
-      place-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      outline: 4px solid var(--brand-yellow);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      outline: 5px solid white;
       padding: 0.5rem;
+      gap: 0;
     }
 
     @media (min-width: 640px) {
       .collage-badge {
-        width: 8rem;
-        height: 8rem;
+        width: 9.5rem;
+        height: 9.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .collage-badge {
+        width: 10rem;
+        height: 10rem;
       }
     }
 
     .badge-top {
+      display: block;
+      width: 100%;
       font-family: var(--font-display);
-      font-size: 0.7rem;
+      font-size: 1.1rem;
       color: var(--brand-yellow);
-      line-height: 1.2;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+      margin: 0;
+      padding: 0;
     }
 
     @media (min-width: 640px) {
       .badge-top {
-        font-size: 0.9rem;
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .badge-top {
+        font-size: 1.4rem;
       }
     }
 
     .badge-bot {
+      display: block;
+      width: 100%;
       font-family: var(--font-display);
-      font-size: 0.55rem;
+      font-size: 0.68rem;
       color: #fff;
-      line-height: 1.2;
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+      margin: 0.15rem 0 0;
+      padding: 0;
     }
 
     @media (min-width: 640px) {
       .badge-bot {
-        font-size: 0.75rem;
+        font-size: 0.82rem;
+        margin-top: 0.2rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .badge-bot {
+        font-size: 0.88rem;
       }
     }
 
@@ -1076,8 +1109,8 @@
       <ul class="nav-links">
         <li><a href="#home">HOME</a></li>
         <li><a href="#about">ABOUT US</a></li>
-        <li><a href="#facilities">FACILITIES</a></li>
         <li><a href="#services">SERVICES</a></li>
+        <li><a href="#facilities">FACILITIES</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
 
@@ -1109,8 +1142,8 @@
       <ul>
         <li><a href="#home" class="mob-link">HOME</a></li>
         <li><a href="#about" class="mob-link">ABOUT US</a></li>
-        <li><a href="#facilities" class="mob-link">FACILITIES</a></li>
         <li><a href="#services" class="mob-link">SERVICES</a></li>
+        <li><a href="#facilities" class="mob-link">FACILITIES</a></li>
         <li><a href="#contact" class="mob-link">CONTACT</a></li>
         <li>
           <a href="tel:07975740702" class="mobile-cta">
@@ -1183,8 +1216,8 @@
           <img class="collage-img" src="images/hero-snooker.jpg" alt="Snooker balls" loading="lazy" />
         </div>
         <div class="collage-badge">
-          <div class="badge-top fd">PERFECT</div>
-          <div class="badge-bot fd">FOR EVERY<br>OCCASION!</div>
+          <p class="badge-top fd">PERFECT</p>
+          <p class="badge-bot fd">FOR EVERY<br>OCCASION!</p>
         </div>
       </div>
     </div>
