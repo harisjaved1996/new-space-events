@@ -10,8 +10,8 @@
   --brand-yellow: #ecfc53;
   --border: oklch(0.92 0.01 250);
   --muted-fg: oklch(0.45 0.03 250);
-  --font-display: "Bebas Neue", "Inter", system-ui, sans-serif;
-  --font-sans: "Bebas Neue", "Inter", system-ui, sans-serif;
+  --font-display: "Archivo Black", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
 }
 
 *,

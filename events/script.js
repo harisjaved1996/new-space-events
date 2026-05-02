@@ -27,17 +27,21 @@ const navLinks = document.querySelectorAll('.nav-links a');
 const sections = [
   { id: 'home',       link: document.querySelector('.nav-links a[href="#home"]') },
   { id: 'about',      link: document.querySelector('.nav-links a[href="#about"]') },
-  { id: 'facilities', link: document.querySelector('.nav-links a[href="#facilities"]') },
   { id: 'services',   link: document.querySelector('.nav-links a[href="#services"]') },
+  { id: 'facilities', link: document.querySelector('.nav-links a[href="#facilities"]') },
   { id: 'contact',    link: document.querySelector('.nav-links a[href="#contact"]') },
 ];
+
+function getAbsoluteTop(el) {
+  return el.getBoundingClientRect().top + window.scrollY;
+}
 
 function updateActive() {
   const scrollY = window.scrollY + 100;
   let current = sections[0];
   sections.forEach(s => {
     const el = document.getElementById(s.id);
-    if (el && el.offsetTop <= scrollY) current = s;
+    if (el && getAbsoluteTop(el) <= scrollY) current = s;
   });
   navLinks.forEach(a => a.classList.remove('active'));
   if (current.link) current.link.classList.add('active');
